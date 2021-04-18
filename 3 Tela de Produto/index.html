@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Menu Responsivo</title>
+        <link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="./searchBar.css">
+	
+		<style>
+            
+      
+*{
+	margin:0;
+	padding:0;
+	color:white;
+	font-family:'Arial';
+    
+	}
+
+    
+	
+.menu{
+	width:100%;
+	height:70px;
+	background-color: #0428a7;
+	}
+
+	
+.menu>ul{
+	list-style:none;	
+	position:relative;
+	margin-left:50px;
+	}
+.menu ul li{
+		width:200px;
+		float:left;
+	}
+
+.menu a{
+	padding:25px;
+	display:block;
+	text-decoration: none;
+	background-color:#0428a7;
+	text-align:center;
+
+	}
+.menu ul ul{
+	list-style:none;
+	position:absolute;
+	visibility:hidden;
+	
+	}
+.menu ul li:hover ul{
+	visibility:visible;
+	}
+	
+.menu a:hover{
+	background-color:#0a8ce9;
+	}
+
+.menu ul ul li{
+	float:none;
+	border-bottom: solid 1px black;
+	}
+.menu ul ul li a{
+	background-color:#069;
+	}
+#bt_menu{
+	display: none;
+	}
+label[for='bt_menu']{
+	padding:5px;
+	background-color:#0428a7;
+	color:#069;
+	font-family:'Arial';
+	text-align:center;
+	font-size:30px;
+	cursor:pointer;
+	display:none;
+	width:50px;
+	height:50px;
+	}	
+label[for='bt_menu']:hover{
+	background-color:#0a8ce9;
+	color:rgb(255, 255, 255);
+	}
+
+@media (max-width: 800px) {
+.menu{
+	margin-left:-100%;
+	transition:all .4s;
+	}
+label[for='bt_menu']{
+	display:block;
+	}
+.menu>ul{
+	margin-left:0;
+	}
+.menu{
+	margin-top:5px;
+	}
+.menu ul li{
+	width:100%;
+	float:none;
+	}
+.menu ul ul{
+	position:static;
+	overflow:hidden;
+	max-height:0;
+	transition:all .4s;
+	}
+.menu ul li:hover ul{
+	height:auto;
+	max-height:200px;
+	transition:all .4s;
+	}
+#bt_menu:checked ~ .menu{
+	margin-left:0;
+	}
+}
+	</style>
+<input type="checkbox" id="bt_menu">
+<label for="bt_menu">&#9776;</label>
+
+<nav class="menu">
+	
+	<ul>
+    	<li><a href="#">Inicio</a></li>
+        <li><a href="#">Promoções</a>
+        <ul>
+            <li><a href="#">Tênis</a>
+            <li><a href="#">Óculos</a>
+        </ul>
+
+        </li>
+        <li><a href="#">Produtos</a>
+        	<ul class="submenu">
+            	<li><a href="#">Camisetas</a>
+                <li><a href="#">Tênis</a>
+                <li><a href="#">Óculos</a>
+                <li><a href="#">Relógios</a>
+                <li><a href="#">Bonés</a>
+            </ul>
+      
+        <li><a href="#">Carinho</a></li>
+   
+        <li><a href="#">Contato</a>
+    
+            	<ul class="submenu">
+                    <li><a href="#">contato@contato.com.br</a>
+                    <li><a href="#">554532</a>
+                    <li><a href="#">5545999</a>
+                    
+        </ul>
+		
+        
+    </li>
+        
+    </ul>
+	<body>
+    
+		<header>
+	  
+		  <div>
+			<h1>Buscar</h1>
+		  </div>
+	  
+		  <form action="#" method="post">
+			<input type="text" name="search" id="search" placeholder="Faça sua Busca" required>
+			<button type="submit"><i class="fas fa-search"></i></button>
+			
+		  </form>
+		</header>
+	  </body>
+
+</nav>
+
+    </body>
+</html>

@@ -1,0 +1,42 @@
+  
+  *
+  
+  body {
+    padding-top: 0vh;
+    background-image: url('../img/fundo2.jpg');
+    background-size: cover;
+    background-position-y: -150px;
+    }
+
+    body {
+      font-family: Arial;
+  }
+  
+  header {
+      display: flex;
+      align-items: none;
+      justify-content: space-between;
+      background-color: #0a8ce9;
+      padding: 1.3em;
+  }
+  
+ 
+  
+  form input, form button {
+      font-size: 1em;
+      border-radius: 0.2em;
+      border: none;
+      padding: 0.2em;
+  }
+  
+  form button {
+      cursor: pointer;
+      background: none;
+      color: whitesmoke;
+  }
+  
+  form button:hover {
+      background-color: rgb(0, 0, 0);
+      color: #0a8ce9;
+  }
+
